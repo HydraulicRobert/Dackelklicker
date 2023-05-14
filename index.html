@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet"href="punkteRaise.css";></link>
+		<script type ="text/javascript">
+			var klickPunkte = 0;
+			var dackelBooster = -1;
+			var dackelBoosterPreis = 10;
+			var dackelPreisRueckgabe = 0;
+			var pausenWert = 1000;
+			var pausenWertReduzierer = 0;
+			var pausenWertReduziererPreis = 40;
+			var pausenWertReduziererRueckgabe = 0;
+			var array = [klickPunkte, dackelBooster, dackelPreisRueckgabe, dackelBoosterPreis,pausenWert, pausenWertReduzierer, pausenWertReduziererPreis, pausenWertReduziererRueckgabe];
+			var tuerstopper = 0;
+		</script>
+		<script src="punkteErhoehen.js"></script>
+		<title> Dackelklicker</title>
+		<noscript>
+			javascript deaktiviert.
+		</noscript>
+	</head>
+	<body>
+		<div id="spiel">
+			<table>
+				<tr>
+					<td><button type="button" onClick="starteSkript()"id="push">starten</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" onClick="punkteErhoehung()"id="push"disabled="true">Wuff</button></td>
+					<td><input type="text"readonly="readonly"value="deine aktuellen Wüffe: "/></td>
+					<td><input type="text"id="klickPunkte"readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<td><button type="button" onClick="dackelKaufen()"id="push"disabled="true">Kaufen </button>
+					<td><input type="text"readonly="readonly"value="Dackelpreis: "/></td><td><input type="text"id="dackelPreisRueckgabe"readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<td><button type="button" onClick="pausenWertReduzieren()"id="push"disabled="true">Kaufen</button></td>
+					<td><input type="text"readonly="readonly"value="Besseres Hundefutter: "/></td>
+					<td><input type="text"id="pausenWertReduziererRueckgabe"readonly="readonly"/></td>
+				</tr>
+			</table>
+		</div>
+		<h1>anleitung: </h1>
+		<p>-Dackel generieren Automatisch Punkte</p>
+		<p>-besseres Hundefutter verkürzt die für die generierung benötigte zeit</p>
+		<p>der erwerb weiterer artikel erhöht den preis für den nächsten
+		<p>du beginnst mit 10 punkten<p>
+		<p>den ersten Dackel gibts aufs haus!</p>
+	</body>
+</html>
